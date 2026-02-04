@@ -1,0 +1,12 @@
+{
+  "route": { "id": "211", "name": "Downtown–Airport", "color": "#1E88E5" },
+  "stops": [
+    { "id": "S1", "name": "Central", "type": "hub", "transfers": ["10","25"] },
+    { "id": "S2", "name": "Museum", "type": "regular" },
+    { "id": "S3", "name": "Terminal", "type": "airport" }
+  ],
+  "segments": [
+    { "from": "S1", "to": "S2", "style": "solid" },
+    { "from": "S2", "to": "S3", "style": "dotted" }
+  ]
+}
