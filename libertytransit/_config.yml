@@ -1,8 +1,6 @@
 title: Liberty Transit
-baseurl: "/libertytransit"
 url: "https://eujmelk.github.io"
-markdown: kramdown
-
+baseurl: "/libertytransit"
 permalink: pretty
 
 collections:
@@ -26,5 +24,4 @@ defaults:
   - scope:
       path: ""
     values:
-
       layout: page
