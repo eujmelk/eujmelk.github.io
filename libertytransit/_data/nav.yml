@@ -1,0 +1,53 @@
+- title: Home
+  url: /
+
+- title: Liberty Rail
+  url: /liberty-rail/
+  children:
+    - title: Subway
+      url: /liberty-rail/subway/
+    - title: Skytrain
+      url: /liberty-rail/skytrain/
+    - title: Using Liberty Rail
+      url: /liberty-rail/using-liberty-rail/
+    - title: Other information
+      url: /liberty-rail/other/
+
+- title: Liberty Bus
+  url: /liberty-bus/
+  children:
+    - title: Routes
+      url: /liberty-bus/routes/
+      children:
+        - title: City Bus
+          url: /liberty-bus/routes/city-bus/
+        - title: Qwick Bus
+          url: /liberty-bus/routes/qwick-bus/
+        - title: Island & Circulator
+          url: /liberty-bus/routes/island-circulator/
+        - title: Local
+          url: /liberty-bus/routes/local/
+    - title: Using Liberty Bus
+      url: /liberty-bus/using-liberty-bus/
+    - title: Schedules
+      url: /liberty-bus/schedules/
+
+- title: Network
+  url: /network/
+  children:
+    - title: Network Map
+      url: /network/network-map/
+    - title: Transfers
+      url: /network/transfers/
+    - title: Stops & Stations
+      url: /network/stops-stations/
+
+- title: Getting Around
+  url: /getting-around/
+  children:
+    - title: Information
+      url: /getting-around/information/
+    - title: Fares
+      url: /getting-around/fares/
+    - title: Other information
+      url: /getting-around/other/

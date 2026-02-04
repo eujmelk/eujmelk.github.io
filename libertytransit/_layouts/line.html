@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<div class="meta">
+  {% if page.mode %}<span class="pill">{{ page.mode }}</span>{% endif %}
+  {% if page.line_code %}<span class="pill secondary">{{ page.line_code }}</span>{% endif %}
+</div>
+
+{% if page.summary %}
+<p class="lede">{{ page.summary }}</p>
+{% endif %}
+
+<div class="grid">
+  <section class="card">
+    <h2>Line Map</h2>
+    {% if page.map_image %}
+      <img class="responsive" src="{{ page.map_image }}" alt="Map for {{ page.title }}" />
+    {% endif %}
+    {% if page.map_pdf %}
+      <p><a href="{{ page.map_pdf }}">Download map (PDF)</a></p>
+    {% endif %}
+  </section>
+
+  <section class="card">
+    <h2>Schedule</h2>
+    {% if page.schedule_pdf %}
+      <p><a href="{{ page.schedule_pdf }}">Download schedule (PDF)</a></p>
+    {% endif %}
+    {% if page.hours %}
+      <p><strong>Hours:</strong> {{ page.hours }}</p>
+    {% endif %}
+    {% if page.frequency %}
+      <p><strong>Frequency:</strong> {{ page.frequency }}</p>
+    {% endif %}
+  </section>
+</div>
+
+<section class="card">
+  <h2>Stations</h2>
+  {% if page.stations %}
+    <ol class="stations">
+      {% for st in page.stations %}
+        <li>{{ st }}</li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    {{ content }}
+  {% endif %}
+</section>

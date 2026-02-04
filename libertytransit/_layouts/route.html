@@ -1,0 +1,63 @@
+---
+layout: default
+---
+<div class="meta">
+  {% if page.route_no %}<span class="pill">Route {{ page.route_no }}</span>{% endif %}
+  {% if page.category %}<span class="pill secondary">{{ page.category }}</span>{% endif %}
+  {% if page.service_span %}<span class="pill secondary">{{ page.service_span }}</span>{% endif %}
+</div>
+
+{% if page.summary %}
+<p class="lede">{{ page.summary }}</p>
+{% endif %}
+
+<div class="grid">
+  <section class="card">
+    <h2>Map</h2>
+    {% if page.map_image %}
+      <img class="responsive" src="{{ page.map_image }}" alt="Route map for {{ page.title }}" />
+    {% else %}
+      <p>Add <code>map_image</code> in front matter.</p>
+    {% endif %}
+    {% if page.map_pdf %}
+      <p><a href="{{ page.map_pdf }}">Download map (PDF)</a></p>
+    {% endif %}
+  </section>
+
+  <section class="card">
+    <h2>Schedule</h2>
+    {% if page.schedule_pdf %}
+      <p><a href="{{ page.schedule_pdf }}">Download schedule (PDF)</a></p>
+    {% endif %}
+    {% if page.frequency %}
+      <p><strong>Frequency:</strong> {{ page.frequency }}</p>
+    {% endif %}
+    {% if page.hours %}
+      <p><strong>Hours:</strong> {{ page.hours }}</p>
+    {% endif %}
+  </section>
+</div>
+
+<section class="card">
+  <h2>Stops</h2>
+  {% if page.key_stops %}
+    <ul>
+      {% for s in page.key_stops %}
+        <li>{{ s }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    {{ content }}
+  {% endif %}
+</section>
+
+{% if page.notes %}
+<section class="card">
+  <h2>Service Notes</h2>
+  <ul>
+    {% for n in page.notes %}
+      <li>{{ n }}</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

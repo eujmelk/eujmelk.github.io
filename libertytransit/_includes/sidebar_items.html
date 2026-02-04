@@ -1,0 +1,18 @@
+{% for item in include.items %}
+  {% assign is_active = false %}
+  {% if page.url == item.url %}
+    {% assign is_active = true %}
+  {% endif %}
+
+  <li class="nav-item">
+    <a class="nav-link {% if is_active %}active{% endif %}" href="{{ item.url }}">
+      {{ item.title }}
+    </a>
+
+    {% if item.children %}
+      <ul class="nav-sub">
+        {% include sidebar_items.html items=item.children level=include.level | plus: 1 %}
+      </ul>
+    {% endif %}
+  </li>
+{% endfor %}

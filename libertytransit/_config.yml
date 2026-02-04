@@ -1,0 +1,27 @@
+title: Liberty Transit
+markdown: kramdown
+
+permalink: pretty
+
+collections:
+  bus_city:
+    output: true
+    permalink: /liberty-bus/routes/city-bus/:name/
+  bus_qwick:
+    output: true
+    permalink: /liberty-bus/routes/qwick-bus/:name/
+  bus_island:
+    output: true
+    permalink: /liberty-bus/routes/island-circulator/:name/
+  bus_local:
+    output: true
+    permalink: /liberty-bus/routes/local/:name/
+  rail_lines:
+    output: true
+    permalink: /liberty-rail/lines/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
